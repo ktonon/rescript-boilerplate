@@ -42,3 +42,16 @@ To run the test watcher:
 ```shell
 > npm run res:test:watch
 ```
+
+## Formatting
+
+The recommend VSCode extension is [rescript-vscode](https://marketplace.visualstudio.com/items?itemName=chenglou92.rescript-vscode). After installing it, configure the default formatter for rescript by editing `Preferences: Open User Settings (JSON)` and adding the following:
+
+```json
+{
+    "[rescript]": {
+        "editor.defaultFormatter": "chenglou92.rescript-vscode",
+        "editor.formatOnSave": true
+    },
+}
+```
