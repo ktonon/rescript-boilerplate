@@ -3,4 +3,5 @@
 /lib/
 .bsb.lock
 .merlin
+*.gen.tsx
 *.res.mjs

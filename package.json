@@ -1,18 +1,27 @@
 {
-  "name": "res",
+  "name": "rescript-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic ReScript project with unit testing",
   "main": "index.js",
+  "watch": {
+    "test": "{src,test}/*.res"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "preres:test": "npm run res:build",
+    "res:test": "retest test/*Test.res.mjs",
+    "res:test:watch": "nodemon --ext res --exec \"npm run res:test\"",
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:dev": "rescript -w"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@rescript/core": "^1.5.0",
     "rescript": "^11.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "rescript-test": "^7.0.1"
   }
 }
