@@ -27,7 +27,7 @@ See the [@genType documentation](https://rescript-lang.org/docs/manual/latest/ty
 
 ## Unit testing
 
-The project uses the [rescript-test](https://github.com/bloodyowl/rescript-test) package, which at this time has no other npm dependencies.
+The project uses the [rescript-test](https://github.com/bloodyowl/rescript-test) package.
 
 Run the tests with:
 
