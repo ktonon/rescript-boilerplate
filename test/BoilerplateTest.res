@@ -1,14 +1,16 @@
-open Test
+open Zora
 open Boilerplate
 
-test("foo is foo", () => {
-  Assert.equal(foo(), "foo")
-})
+zora("Boilerplate tests", async t => {
+  t->test("foo is foo", async t => {
+    t->is(foo(), "foo")
+  })
 
-test("deep equality of a person", () => {
-  Assert.deepEqual(arthur, {age: 42, name: "Arthur"})
-})
+  t->test("deep equality of a person", async t => {
+    t->equal(arthur, {age: 42, name: "Arthur"})
+  })
 
-test("4 is less than 5", () => {
-  Assert.lessThan(4, 5)
+  t->test("4 is less than 5", async t => {
+    t->ok(4 < 5)
+  })
 })
