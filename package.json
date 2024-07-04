@@ -2,10 +2,8 @@
   "name": "rescript-boilerplate",
   "version": "1.0.0",
   "description": "Basic ReScript project with unit testing",
-  "main": "index.js",
-  "watch": {
-    "test": "{src,test}/*.res"
-  },
+  "main": "src/Boilerplate.res.mjs",
+  "type": "module",
   "scripts": {
     "preres:test": "npm run res:build",
     "res:test": "retest test/*Test.res.mjs",

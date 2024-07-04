@@ -1,5 +1,5 @@
 open Test
-open Demo
+open Boilerplate
 
 test("foo is foo", () => {
   Assert.equal(foo(), "foo")
