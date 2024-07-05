@@ -15,11 +15,11 @@ test/
     DemoTest.res
 ```
 
-Running `npm run res:build` runs the ReScript compiler and produces these generated files:
+Running `npm run build` runs the ReScript compiler and produces these generated files:
 
 ```
 src/
-    Demo.res.mjs -- Compiled JavaScript module
+    Demo.mjs -- Compiled JavaScript module
     Demo.gen.tsx -- Typescript definitions
 ```
 
@@ -27,21 +27,18 @@ See the [@genType documentation](https://rescript-lang.org/docs/manual/latest/ty
 
 ## Unit testing
 
-The project uses the [rescript-test](https://github.com/bloodyowl/rescript-test) package.
+The project uses the [@dusty-phillips/rescript-zora](https://github.com/dusty-phillips/rescript-zora) package.
 
-Run the tests with:
-
-```shell
-> npm run res:test
-```
-
-Unfortunately `rescript-test` does __not__ contain a `--watch` flag (at this time), so this project uses `nodemod` to watch the `.res` files and then recompile and run the tests.
-
-To run the test watcher:
+Run the tests with (requires a build first):
 
 ```shell
-> npm run res:test:watch
+> npm run test:ci
 ```
+
+To watch tests you must run the following in separate terminals:
+
+- `npm run dev` to rebuild the `.res` files as they change
+- `npm test` to re-run the tests when the `.mjs` files change
 
 ## Formatting
 
